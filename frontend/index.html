@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Knowledge Assistant | Answers from your college documents</title>
+  <meta name="description"
+        content="Upload college PDFs and ask questions. Every answer cites the source document and page number." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/static/css/base.css" />
+  <link rel="stylesheet" href="/static/css/landing.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">
+        <div class="brand-mark">CK</div>
+        <div>
+          <p class="brand-title">College Knowledge</p>
+          <p class="brand-subtitle">Assistant</p>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#stack">Tech stack</a>
+      </nav>
+
+      <a class="btn btn-primary btn-sm" href="/app">Open assistant</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span>RAG-powered college assistant</span>
+          <h1>Answers from your college documents, <em>with the page to prove it.</em></h1>
+          <p class="hero-lead">
+            Upload handbooks, syllabi and exam rules, then ask questions in plain language.
+            Every answer comes from your PDFs and cites the document and page it came from.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/app">
+              Start asking
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14" /><path d="m13 6 6 6-6 6" />
+              </svg>
+            </a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+          <p class="hero-note">Works with text-based PDFs. No account needed.</p>
+        </div>
+
+        <div class="hero-visual">
+          <div class="preview">
+            <div class="preview-bar">
+              <span></span><span></span><span></span>
+              <p>Example conversation</p>
+            </div>
+
+            <div class="preview-body">
+              <div class="bubble bubble-user">What is the minimum attendance required to sit the end-semester exam?</div>
+
+              <div class="bubble bubble-bot">
+                <p>
+                  Students must attend at least <strong>75%</strong> of classes in each course.
+                  Below that, the student is not eligible for the end-semester exam unless a
+                  medical exemption is approved.
+                </p>
+                <div class="sources">
+                  <span class="source-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5" />
+                    </svg>
+                    student_handbook.pdf · p. 14
+                  </span>
+                  <span class="source-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5" />
+                    </svg>
+                    exam_regulations.pdf · p. 3
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="preview-input">
+              <span>Ask a question…</span>
+              <span class="preview-send" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" /><path d="m13 6 6 6-6 6" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Features</span>
+          <h2>Stop scrolling through 80-page PDFs</h2>
+          <p>College rules are buried in long documents. Ask a question and get the relevant part, with a citation you can check.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 16V4" /><path d="m7 9 5-5 5 5" /><path d="M20 16v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3" />
+              </svg>
+            </div>
+            <h3>Upload your PDFs</h3>
+            <p>Add handbooks, syllabi or circulars. Text is extracted page by page and indexed automatically.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />
+              </svg>
+            </div>
+            <h3>Search by meaning</h3>
+            <p>Semantic search finds the right passage even when your question uses different words than the document.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 3h12v18l-6-4-6 4z" />
+              </svg>
+            </div>
+            <h3>Every answer is cited</h3>
+            <p>Each answer lists the source PDF and page number, so you can open the document and verify it.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z" /><path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h3>Grounded, not guessed</h3>
+            <p>The assistant answers only from your documents and tells you when the answer isn't in them.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">How it works</span>
+          <h2>Retrieval-Augmented Generation, in four steps</h2>
+          <p>Uploading builds a searchable index once. Every question then searches that index before the AI writes an answer.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-number">1</span>
+            <h3>Upload</h3>
+            <p>The PDF is saved and its text is extracted one page at a time.</p>
+            <span class="step-tag">On upload</span>
+          </li>
+          <li class="step">
+            <span class="step-number">2</span>
+            <h3>Chunk &amp; embed</h3>
+            <p>Text is split into overlapping chunks, turned into vectors with Sentence Transformers, and stored in ChromaDB.</p>
+            <span class="step-tag">On upload</span>
+          </li>
+          <li class="step">
+            <span class="step-number">3</span>
+            <h3>Retrieve</h3>
+            <p>Your question becomes a vector too, and the most similar chunks are pulled from ChromaDB.</p>
+            <span class="step-tag">On every question</span>
+          </li>
+          <li class="step">
+            <span class="step-number">4</span>
+            <h3>Answer</h3>
+            <p>Gemini writes an answer from those chunks and returns it with document and page citations.</p>
+            <span class="step-tag">On every question</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Tech stack</span>
+          <h2>Built with open, well-known tools</h2>
+        </div>
+
+        <ul class="stack">
+          <li class="stack-item"><strong>FastAPI</strong><span>REST API</span></li>
+          <li class="stack-item"><strong>LangChain</strong><span>RAG building blocks</span></li>
+          <li class="stack-item"><strong>ChromaDB</strong><span>Vector database</span></li>
+          <li class="stack-item"><strong>Sentence Transformers</strong><span>Local embeddings</span></li>
+          <li class="stack-item"><strong>Google Gemini</strong><span>Answer generation</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-card">
+          <h2>Have a question about college rules?</h2>
+          <p>Upload a PDF and get a cited answer in seconds.</p>
+          <a class="btn btn-light" href="/app">Open the assistant</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>College Knowledge Assistant</span>
+      <div class="footer-links">
+        <a href="/app">Assistant</a>
+        <a href="/docs">API docs</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

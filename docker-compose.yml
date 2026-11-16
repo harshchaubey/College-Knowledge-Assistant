@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    image: college-knowledge-assistant
+    ports:
+      - "8000:8000"
+    env_file: .env
+    environment:
+      CHROMA_DIR: /app/data/chroma
+      UPLOAD_DIR: /app/data/uploads
+    volumes:
+      - app-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  app-data:

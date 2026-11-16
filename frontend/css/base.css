@@ -1,0 +1,90 @@
+:root {
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --surface-muted: #faf8f4;
+  --border: #e7e2d8;
+  --text: #1f1d1a;
+  --text-muted: #6b665d;
+
+  --accent: #2f3fb5;
+  --accent-strong: #24318f;
+  --accent-soft: #eef0fc;
+
+  --success: #1f7a4d;
+  --success-soft: #e8f5ee;
+  --danger: #b42318;
+  --danger-soft: #fdecea;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+
+  --shadow-sm: 0 1px 2px rgba(31, 29, 26, 0.06);
+  --shadow-md: 0 8px 24px rgba(31, 29, 26, 0.08);
+
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 100% -10%, #e9ecff 0%, transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, #fbefdc 0%, transparent 55%),
+    var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), #5b6cf0);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 6px 16px rgba(47, 63, 181, 0.3);
+}
+
+.brand-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.brand-subtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}

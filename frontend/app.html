@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistant | College Knowledge Assistant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/static/css/base.css" />
+  <link rel="stylesheet" href="/static/css/app.css" />
+  <script src="/static/js/upload.js" defer></script>
+  <script src="/static/js/chat.js" defer></script>
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <a class="brand" href="/">
+        <div class="brand-mark">CK</div>
+        <div>
+          <h1 class="brand-title">College Knowledge</h1>
+          <p class="brand-subtitle">Assistant</p>
+        </div>
+      </a>
+
+      <section class="panel">
+        <h2 class="panel-title">Knowledge base</h2>
+        <p class="panel-hint">Upload college PDFs such as handbooks, syllabi, and exam rules.</p>
+
+        <label class="dropzone" id="dropzone">
+          <input id="file-input" class="sr-only" type="file" accept="application/pdf" />
+          <svg class="dropzone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 16V4" />
+            <path d="m7 9 5-5 5 5" />
+            <path d="M20 16v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3" />
+          </svg>
+          <span class="spinner" aria-hidden="true"></span>
+          <span class="dropzone-title" id="dropzone-title">Drop a PDF here</span>
+          <span class="dropzone-sub" id="dropzone-sub">or click to browse</span>
+        </label>
+
+        <p class="upload-status" id="upload-status" role="status" hidden></p>
+
+        <ul class="doc-list" id="doc-list">
+          <li class="doc-empty">Loading documents…</li>
+        </ul>
+      </section>
+
+      <footer class="sidebar-footer">
+        Answers are generated only from your uploaded documents and cite the source page.
+      </footer>
+    </aside>
+
+    <main class="chat">
+      <header class="chat-header">
+        <h2 class="chat-title">Ask your documents</h2>
+        <p class="chat-subtitle">Every answer shows the PDF and page it came from.</p>
+      </header>
+
+      <div class="messages" id="messages" aria-live="polite">
+        <div class="empty-state" id="empty-state">
+          <div class="empty-icon">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor"
+                 stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 19.5V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14.5" />
+              <path d="M4 19.5A1.5 1.5 0 0 0 5.5 21H20" />
+              <path d="M8 7h8M8 11h6" />
+            </svg>
+          </div>
+          <h3>What would you like to know?</h3>
+          <p>Upload a PDF, then ask a question. Try one of these:</p>
+          <div class="suggestions">
+            <button class="chip" type="button">What is the attendance policy?</button>
+            <button class="chip" type="button">How are internal marks calculated?</button>
+            <button class="chip" type="button">What are the library rules?</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-wrap">
+        <form class="composer" id="chat-form">
+          <textarea id="question" name="question" rows="1" maxlength="1000"
+                    aria-label="Your question"
+                    placeholder="Ask a question about your college documents…"></textarea>
+          <button class="send-btn" type="submit" aria-label="Send question">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </button>
+        </form>
+        <p class="composer-hint">Press Enter to send, Shift + Enter for a new line.</p>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>
